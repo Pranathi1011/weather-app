@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #3498db, #2ecc71);
+}
+
+.wrapper {
+  width: 420px;
+  max-width: 95%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper header {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+header i {
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.wrapper.active header i {
+  font-size: 25px;
+  margin-left: 5px;
+}
+
+.input-part {
+  margin: 25px 20px 35px;
+}
+
+.input-part .info-txt {
+  display: none;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 7px;
+  margin-bottom: 15px;
+}
+
+.input-part :where(input, button) {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 7px;
+}
+
+.input-part input {
+  width: 80% !important;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.input-part input:is(:focus, :valid) {
+  border: 1px solid #aaa;
+}
+
+.input-part input::placeholder {
+  color: #ccc;
+}
+
+.searchArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.searchIcon {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #aaa;
+  color: white;
+  width: 25%;
+  height: 50px;
+  outline: none;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 14px;
+  margin-left: 8px;
+  transition: 0.3s ease;
+}
+
+.searchIcon:hover {
+  background: #777;
+}
+
+.input-part .separator {
+  height: 1px;
+  width: 100%;
+  margin: 25px 0;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.separator::before {
+  content: "or";
+  color: #ccc;
+  padding: 0 15px;
+  font-size: 19px;
+  background-color: #fff;
+}
+
+.input-part button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #aaa;
+  transition: 0.3s ease;
+}
+
+.input-part button:hover {
+  background: #777;
+}
+
+.weather-part {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wrapper.active .weather-part {
+  display: flex;
+}
+
+.weather-part img {
+  width: 180px;
+  max-width: 100%;
+}
+
+.weather-part .temp {
+  display: flex;
+  font-size: 75px;
+  margin-top: 10px;
+}
+
+.weather-part .temp .numb {
+  font-weight: 100;
+}
+
+.weather-part .temp .deg {
+  font-size: 45px;
+  margin: 10px 5px 0 0;
+  display: block;
+}
+
+.weather-part .weather {
+  font-size: 18px;
+  text-align: center;
+  margin: -5px 20px 15px;
+}
+
+.weather-part .location {
+  display: flex;
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+
+.location i {
+  font-size: 22px;
+  margin: 0 5px 0 0;
+}
+
+.weather-part .bottom-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+}
+
+.bottom-details .column {
+  width:
